@@ -5,3 +5,5 @@ tests using Maven.
 
 Please note that this project uses the [Maven Wrapper](https://github.com/takari/maven-wrapper).
 Thus, to ensure that the correct version of Maven is used, invoke `mvnw` instead of `mvn`.
+
+https://github.com/mateusGPr/junit5-jupiter-starter-maven
