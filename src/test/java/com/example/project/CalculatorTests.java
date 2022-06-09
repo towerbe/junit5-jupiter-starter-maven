@@ -29,19 +29,19 @@ class CalculatorTests {
 
 	@Test
 	@DisplayName("Add: 1 + 1 = 2")
-	void addsTwoNumbers() {
+	void addTwoNumbers() {
 		assertEquals(2, this.calculator.add(1, 1), "1 + 1 should equal 2");
 	}
 
 	@Test
 	@DisplayName("Subtract: 1 - 1 = 0")
-	void subsTwoNumbers() {
+	void subtractTwoNumbers() {
 		assertEquals(0, this.calculator.sub(1, 1), "1 - 1 should equal 0");
 	}
 
 	@Test
 	@DisplayName("Multiply: 7 * 6 = 42")
-	void mulTwoNumbers() {
+	void multiplyTwoNumbers() {
 		assertEquals(42, this.calculator.mul(7, 6), "7 * 6 should equal 42");
 	}
 
