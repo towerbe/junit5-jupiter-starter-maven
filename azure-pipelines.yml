@@ -2,7 +2,7 @@ trigger:
 - none
 
 pool:
-  name: Default
+  name: MSTroubleShooting
 
 steps:
 - task: Maven@4
