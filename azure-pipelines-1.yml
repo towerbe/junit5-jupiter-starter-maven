@@ -9,6 +9,7 @@ trigger:
 pool:
   name: MSTroubleShooting
 
+steps:
 - task: Maven@4
   displayName: 'Maven junit5-samples-main/junit5-samples-main/junit5-jupiter-starter-maven/pom.xml'
   inputs:
