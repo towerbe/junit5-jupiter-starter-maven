@@ -7,7 +7,7 @@ trigger:
 - none
 
 pool:
-  vmImage: ubuntu-latest
+  name: MSTroubleShooting
 
 steps:
 - script: echo Hello, world!
@@ -17,3 +17,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: Maven@4
+  displayName: 'Maven junit5-samples-main/junit5-samples-main/junit5-jupiter-starter-maven/pom.xml'
+  inputs:
+  mavenPomFile: 'junit5-samples-main/junit5-samples-main/junit5-jupiter-starter-maven/pom.xml'
+  options: '-X'
+  testResultsFiles: '**/TEST-*.xml'
+
+-task: PublishTestResults@2
