@@ -2,5 +2,16 @@ trigger:
 - none
 
 pool:
-  name: MSTroubleShooting
+  name: MSTroubleShooting
 
+steps:
+- task: Maven@4
+  displayName: 'Maven junit5-samples-main/junit5-samples-main/junit5-jupiter-starter-maven/pom.xml'
+  inputs:
+    mavenPOMFile: 'junit5-samples-main/junit5-samples-main/junit5-jupiter-starter-maven/pom.xml'
+    options: '-X'
+    testResultsFiles: '**/TEST-*.xml'
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/TEST-*.xml'
+  retryCountOnTaskFailure: 5
