@@ -11,9 +11,9 @@ pool:
 
 steps:
 - task: Maven@4
-  displayName: 'Maven junit5-samples-main/junit5-samples-main/junit5-jupiter-starter-maven/pom.xml'
+  displayName: 'pom.xml'
   inputs:
-    mavenPOMFile: 'junit5-samples-main/junit5-samples-main/junit5-jupiter-starter-maven/pom.xml'
+    mavenPOMFile: 'pom.xml'
     options: '-X'
     testResultsFiles: '**/TEST-*.xml'
 
