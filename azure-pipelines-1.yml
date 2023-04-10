@@ -9,20 +9,13 @@ trigger:
 pool:
   name: MSTroubleShooting
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
 - task: Maven@4
   displayName: 'Maven junit5-samples-main/junit5-samples-main/junit5-jupiter-starter-maven/pom.xml'
   inputs:
-  mavenPomFile: 'junit5-samples-main/junit5-samples-main/junit5-jupiter-starter-maven/pom.xml'
-  options: '-X'
-  testResultsFiles: '**/TEST-*.xml'
+    mavenPOMFile: 'junit5-samples-main/junit5-samples-main/junit5-jupiter-starter-maven/pom.xml'
+    options: '-X'
+    testResultsFiles: '**/TEST-*.xml'
 
--task: PublishTestResults@2
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/TEST-*.xml'
+  retryCountOnTaskFailure: 5
