@@ -6,6 +6,10 @@ trigger:
 pool:
   name: MSTroubleShooting
 
+variables:
+  - name: agent.disablelogplugin
+    value: true
+
 steps:
 - task: Bash@3
   displayName: 'Bash Test'
