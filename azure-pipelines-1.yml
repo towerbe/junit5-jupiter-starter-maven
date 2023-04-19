@@ -7,8 +7,13 @@ pool:
   name: MSTroubleShooting
 
 steps:
-- task: CMake@1
-  displayName: 'CMake'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
 #- task: Maven@4
 #  displayName: 'Testing with the base pom.xml'
 #  inputs:
@@ -22,4 +27,4 @@ steps:
 
 #- task: PublishTestResults@2
 #  displayName: 'Publish Test Results **/TEST-*.xml'
-#  retryCountOnTaskFailure: 5
+#  retryCountOnTaskFailure: 
