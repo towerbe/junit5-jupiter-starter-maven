@@ -8,6 +8,7 @@ pool:
 
 steps:
 - task: Bash@3
+  displayName: 'Bash Test'
   inputs:
     targetType: 'inline'
     script: |
