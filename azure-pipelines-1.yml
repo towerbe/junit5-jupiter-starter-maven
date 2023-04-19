@@ -7,17 +7,19 @@ pool:
   name: MSTroubleShooting
 
 steps:
-- task: Maven@4
-  displayName: 'Testing with the base pom.xml'
-  inputs:
-    mavenPOMFile: 'pom.xml'
-    publishJUnitResults: false
-    javaHomeOption: JDKVersion
-    mavenVersionOption: Default
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+- task: CMake@1
+  displayName: 'CMake'
+#- task: Maven@4
+#  displayName: 'Testing with the base pom.xml'
+#  inputs:
+#    mavenPOMFile: 'pom.xml'
+#    publishJUnitResults: false
+#    javaHomeOption: JDKVersion
+#    mavenVersionOption: Default
+#    mavenAuthenticateFeed: false
+#    effectivePomSkip: false
+#    sonarQubeRunAnalysis: false
 
-- task: PublishTestResults@2
-  displayName: 'Publish Test Results **/TEST-*.xml'
-  retryCountOnTaskFailure: 5
+#- task: PublishTestResults@2
+#  displayName: 'Publish Test Results **/TEST-*.xml'
+#  retryCountOnTaskFailure: 5
